@@ -5,29 +5,63 @@ body {
   color: #777;
   background: url("../images/concrete_seamless.png");
 }
-
-* {
-  box-sizing: border-box;
+.container{
+  width:720;
+  padding-left:0px;
+}
+#logo {
+  width: 280px;
+  height: 90px;
+  text-align:center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top:30px;
+  color: #fff;
+  background: #4aaaa5;
+  margin-left:25px;
 }
 
-/* general */
+.nav1 {
+  float: right;
+  margin-top: 25px;
+}
 
-.container {
+.nav1 a {
+  display: inline-block;
+  padding-left: 15px;
+  margin-left: 15px;
+  line-height: 18px;
+  font-size:25px;
+  color: #999;
+  text-decoration: none;
+  border-left: 1px solid #efefef;
+}
+
+.personal-photo{
+  float:left;
+  margin-right:25px;
+}
+
+.main-section {
+  float: left;
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+  max-width: 650px;
+  padding: 30px;
+  margin: 0 0 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+footer {
+  padding: 30px 0;
   clear: both;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 20px;
-}
-
-p:last-child {
-  margin-bottom: 0;
+  font-size: 18px;
+  color: #fff;
+  color: #ccc;
+  text-align: center;
+  background: #666;
+  border-top: 8px solid #4aaaa5;
 }
 
 h1,
@@ -45,72 +79,6 @@ h1 {
   border-bottom: 3px solid #ddd;
 }
 
-h2,
-h3 {
-  font-size: 22px;
-}
-
-/* header */
-
-#masthead {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  margin: 0 0 30px;
-  overflow: auto;
-  color: #fff;
-  background: #fff;
-  border-bottom: 2px solid #ccc;
-}
-
-#logo {
-  float: left;
-  width: 250px;
-  height: 90px;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 90px;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  background: #4aaaa5;
-}
-
-nav {
-  float: right;
-  margin-top: 25px;
-}
-
-nav a {
-  display: inline-block;
-  padding-left: 15px;
-  margin-left: 15px;
-  line-height: 18px;
-  color: #999;
-  text-decoration: none;
-  border-left: 1px solid #efefef;
-}
-
-nav a:first-child {
-  border-left: 0 none;
-}
-
-/* footer */
-
-footer {
-  padding: 30px 0;
-  clear: both;
-  font-size: 12px;
-  color: #fff;
-  color: #ccc;
-  text-align: center;
-  background: #666;
-  border-top: 8px solid #4aaaa5;
-}
-
-/* sidebar */
-
 .sidebar {
   float: right;
   width: 100%;
@@ -121,8 +89,14 @@ footer {
   border: 1px solid #ddd;
 }
 
+.sidebar a{
+  width:60px;
+  height:60px;
+}
+
 h3,
 .sidebar h2 {
+  font-size:22px;
   padding-bottom: 20px;
   margin-bottom: 15px;
   line-height: 22px;
@@ -130,30 +104,49 @@ h3,
 }
 
 .social {
-  width: 62px;
-  height: 62px;
+  width: 60px;
+  height: 60px;
   margin-top: 8px;
   margin-right: 5px;
 }
 
-.social:last-child {
-  margin-right: 0;
+#contact-form ul {
+  margin-bottom: 20px;
 }
 
-/* main */
-
-#main-container {
-  padding-top: 130px;
+#contact-form li {
+  margin-bottom: 10px;
 }
 
-.main-section {
-  float: left;
+
+label,
+input[type=text],
+input[type=email],
+textarea {
+  display: block;
   width: 100%;
-  max-width: 650px;
-  padding: 30px;
-  margin: 0 0 40px;
-  background: #fff;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
   border: 1px solid #ddd;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type=submit] {
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background: #4aaaa5;
+  border: 0 none;
 }
 
 /* portfolio page */
@@ -188,78 +181,4 @@ h3,
   text-align: center;
   background: #4aaaa5;
   border-bottom: 0;
-}
-
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
-}
-
-/* contact page */
-
-#contact-form ul {
-  margin-bottom: 20px;
-}
-
-#contact-form li {
-  margin-bottom: 10px;
-}
-
-label,
-input[type=text],
-input[type=email],
-textarea {
-  display: block;
-  width: 100%;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  height: 35px;
-  padding: 0 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-}
-
-textarea {
-  height: 200px;
-}
-
-input[type=submit] {
-  padding: 10px 30px;
-  font-size: 18px;
-  color: #fff;
-  cursor: pointer;
-  background: #4aaaa5;
-  border: 0 none;
-}
-
-@media only screen and (max-width: 960px) {
-  .sidebar{
-    float:right;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .sidebar{
-    float:left;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .sidebar{
-    float:left;
-    max-width:600px;
-  }
-  .auth-image{
-    width:540px;
-  }
-  #logo{
-    width:640px;
-  }
-
 }
